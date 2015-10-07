@@ -8,10 +8,13 @@ namespace Classi_5BINT
 { 
     class Macchina
     {
+        
+        //Property        
         public string Produttore { get; set; }
         public string Modello { get; set; }
         public int Anno { get; set; }
         public string Colore { get; set; }
+        public float PrezzoDiListino { get; set; }
         public int Eta
         {
             get
@@ -24,6 +27,20 @@ namespace Classi_5BINT
             {
                 return Macchina.CalcolaValore(this);
             }
+        }
+      
+        // Costruttori
+        public Macchina() { }
+        public Macchina(string produttore, string modello, int anno)
+        {
+            this.Produttore = produttore;
+            this.Modello = modello;
+            this.Anno = anno;
+        }
+        public Macchina(string produttore, string modello, int anno, string colore)
+            : this(produttore,modello,anno)
+        {
+            this.Colore = colore;
         }
 
         public override string ToString()
