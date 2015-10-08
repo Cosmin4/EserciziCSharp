@@ -28,6 +28,17 @@ namespace Classi_5BINT
             m2 = null;
             m1 = null;
 
+            //var macchinaComune = new Macchina();
+            //macchinaComune.Modello = "500 XL";
+
+            //Console.WriteLine(macchinaComune.ToString());
+            //Metodo statico o di classe
+            Class1.Metodo2();
+            var c1 = new Class1();
+            //Metodo di istanza o di oggetto
+            c1.Metodo1();
+            
+
             Console.ReadKey();
         }
     }

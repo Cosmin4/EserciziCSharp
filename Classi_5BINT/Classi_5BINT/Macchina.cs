@@ -30,7 +30,11 @@ namespace Classi_5BINT
         }
       
         // Costruttori
-        public Macchina() { }
+        public Macchina()
+        {
+            this.Produttore = "Fiat";
+            this.Anno = DateTime.Now.Year;
+        }
         public Macchina(string produttore, string modello, int anno)
         {
             this.Produttore = produttore;
