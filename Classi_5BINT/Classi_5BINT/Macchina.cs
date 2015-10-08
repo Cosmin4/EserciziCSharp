@@ -5,29 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Classi_5BINT
-{ 
-    class Macchina
+{
+    enum Colore { Bianco, Rosso, Nero, Blue, Grigio, Giallo }
+
+    class Macchina : Veicolo
     {
         
         //Property        
-        public string Produttore { get; set; }
-        public string Modello { get; set; }
-        public int Anno { get; set; }
-        public string Colore { get; set; }
-        public float PrezzoDiListino { get; set; }
-        public int Eta
-        {
-            get
-            {
-                return DateTime.Now.Year - this.Anno;
-            }
-        }
-        public float Valore {
-            get
-            {
-                return Macchina.CalcolaValore(this);
-            }
-        }
+      
       
         // Costruttori
         public Macchina()
@@ -41,22 +26,25 @@ namespace Classi_5BINT
             this.Modello = modello;
             this.Anno = anno;
         }
-        public Macchina(string produttore, string modello, int anno, string colore)
+        public Macchina(string produttore, string modello, int anno, Colore colore)
             : this(produttore,modello,anno)
         {
             this.Colore = colore;
         }
 
-        public override string ToString()
+       
+        public float Valore
         {
-            return String.Format("Produttore = {0}\nModello = {1}\nAnno immatricolazione = {2} ({3} anni)\nColore = {4}", 
-                this.Produttore,this.Modello,this.Anno,this.Eta   ,this.Colore);
+            get
+            {
+                return Macchina.CalcolaValore(this);
+            }
         }
-
         private static float CalcolaValore(Macchina m)
         {
             // Da inserire un metodo
-            return 100.0F-m.Eta;
+            return 100.0F - m.Eta;
         }
+
     }
 }
