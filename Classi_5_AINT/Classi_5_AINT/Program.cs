@@ -10,15 +10,17 @@ namespace Classi_5_AINT
     {
         static void Main(string[] args)
         {
-            Cilindro c1 = new Cilindro(3.0F,4.0F);
+            Cilindro cl1 = new Cilindro(3.0F,4.0F);
+            Cerchio c1 = new Cerchio(4.0F);
 
+            Console.WriteLine(c1);
+            Console.WriteLine(cl1);
 
-            c1.Raggio = 3.0F;
+            Cerchio c2 = c1;
+            c2 = null;
+            c1 = null;
 
-
-
-            c1.Altezza = 4.0F;
-
+            Console.ReadKey();
         }
     }
 }

@@ -17,10 +17,28 @@ namespace Classi_5_AINT
         }
 
         //Costruttori
-        public Cilindro():this(0,0) { }
+        public Cilindro():this(0.0F,0F) { }
         public Cilindro(double raggioBase, double altezza) : base(raggioBase)
         {
             this.Altezza = altezza;
+        }
+
+        //Metodi e Property
+        public double Volume
+        {
+            get
+            {
+                return this.Area * this.Altezza;
+            }
+        }
+
+        //Override
+        public override string ToString()
+        {
+            return String.Format("CILINDRO\nRaggio = \t{0:N} m\nAltezza = \t{1:N} m\nArea = \t{2:N} m^2", 
+                this.Raggio,
+                this.Altezza, 
+                this.Volume) ;
         }
     }
 }

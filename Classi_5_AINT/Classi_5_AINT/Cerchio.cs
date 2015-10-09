@@ -36,5 +36,12 @@ namespace Classi_5_AINT
             return Math.PI * Math.Pow(this.Raggio, 2);
         }
 
+        //Override
+        public override string ToString()
+        {
+            return String.Format("CERCHIO\nRaggio = \t{0:N} m\nArea = \t{1:N} m^2", 
+                this.Raggio, 
+                this.Area);
+        }
     }
 }
