@@ -38,7 +38,7 @@ namespace Classi_5_AINT
             return String.Format("CILINDRO\nRaggio = \t{0:N} m\nAltezza = \t{1:N} m\nArea = \t{2:N} m^2", 
                 this.Raggio,
                 this.Altezza, 
-                this.Volume) ;
+                this.Volume);
         }
     }
 }
